@@ -11,13 +11,13 @@ const PostDetail = () => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => setPost(data));
-  }, []);
+  }, [id]);
   useEffect(() => {
     const url = `https://jsonplaceholder.typicode.com/posts/${id}/comments`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setComment(data));
-  }, []);
+  }, [id]);
   console.log()
   return (
     <div>
