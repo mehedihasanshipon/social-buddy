@@ -20,7 +20,7 @@ const PostDetail = () => {
   }, [id]);
   console.log()
   return (
-    <div>
+    <div className ="container">
       <h2>This is post Detail: {id} </h2>
       <h3>Title: {post.title} </h3>
       <p>{post.body}</p>

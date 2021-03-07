@@ -11,13 +11,16 @@ import Users from './components/Users/Users';
 import About from './components/About/About';
 import PostDetail from "./components/PostDetail/PostDetail";
 import NoMatch from "./NoMatch/NoMatch";
+import Header from "./components/Header/Header";
 
 function App() {
   return (
-    <div className="container">
+    <div>
       <Router>
+        
       <div>
-        <nav>
+      <Header />
+        {/* <nav>
           <ul>
             <li>
               <Link to="/">Home</Link>
@@ -29,7 +32,7 @@ function App() {
               <Link to="/users">Users</Link>
             </li>
           </ul>
-        </nav>
+        </nav> */}
 
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
