@@ -10,6 +10,7 @@ import Home from './components/Home/Home';
 import Users from './components/Users/Users';
 import About from './components/About/About';
 import PostDetail from "./components/PostDetail/PostDetail";
+import NoMatch from "./NoMatch/NoMatch";
 
 function App() {
   return (
@@ -33,6 +34,9 @@ function App() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
+        <Route path="/home">
+            <Home />
+          </Route>
           <Route path="/about">
             <About />
           </Route>
@@ -42,8 +46,11 @@ function App() {
           <Route path="/post/:id">
             <PostDetail />
           </Route>
-          <Route path="/">
+          <Route exact path="/">
             <Home />
+          </Route>
+          <Route path="*">
+            <NoMatch />
           </Route>
         </Switch>
       </div>
